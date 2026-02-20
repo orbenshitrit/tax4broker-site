@@ -1,54 +1,57 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════
-   Tax4Broker — "Mercedes" Design System
-   Premium Dark-Mode for Israeli Accountants
+   Tax4Broker — "Seato × Apple" Design System
+   Premium Light-Mode Fintech for Accountants
    ═══════════════════════════════════════════════ */
 
 @theme {
-  /* ── Palette ────────────────────────────────── */
-  --color-navy-950: #020617;
-  --color-navy-900: #0F172A;
-  --color-navy-800: #1E293B;
-  --color-navy-700: #334155;
-  --color-navy-600: #475569;
-  --color-navy-500: #64748B;
-  --color-navy-400: #94A3B8;
-  --color-navy-300: #CBD5E1;
-  --color-navy-200: #E2E8F0;
+  /* ── Surfaces ───────────────────────────────── */
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #FAFAFA;
+  --color-surface-muted: #F5F5F7;
+  --color-surface-card: #FFFFFF;
 
-  --color-emerald-700: #047857;
-  --color-emerald-600: #059669;
-  --color-emerald-500: #10B981;
-  --color-emerald-400: #34D399;
-  --color-emerald-300: #6EE7B7;
-  --color-emerald-200: #A7F3D0;
+  /* ── Text (Apple-style hierarchy) ───────────── */
+  --color-ink: #1D1D1F;
+  --color-ink-secondary: #424245;
+  --color-ink-tertiary: #86868B;
+  --color-ink-quaternary: #AEAEB2;
 
-  --color-surface-card: #162032;
+  /* ── Accent — Deep Indigo ───────────────────── */
+  --color-indigo-50: #EEF2FF;
+  --color-indigo-100: #E0E7FF;
+  --color-indigo-200: #C7D2FE;
+  --color-indigo-300: #A5B4FC;
+  --color-indigo-400: #818CF8;
+  --color-indigo-500: #4F46E5;
+  --color-indigo-600: #4338CA;
+  --color-indigo-700: #3730A3;
 
-  /* Semantic tokens */
-  --color-background: #0F172A;
-  --color-foreground: #E2E8F0;
-  --color-primary: #0F172A;
-  --color-primary-foreground: #F8FAFC;
-  --color-secondary: #1E293B;
-  --color-accent: #10B981;
-  --color-accent-foreground: #FFFFFF;
-  --color-muted: #94A3B8;
-  --color-border: #334155;
+  /* ── Borders ────────────────────────────────── */
+  --color-edge: #E5E7EB;
+  --color-edge-subtle: #F3F4F6;
+  --color-edge-strong: #D1D5DB;
+
+  /* ── Semantic aliases ───────────────────────── */
+  --color-background: #FFFFFF;
+  --color-foreground: #1D1D1F;
 
   /* ── Typography ─────────────────────────────── */
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* ── Consistent shadows ─────────────────────── */
-  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.35);
-  --shadow-glow-lg: 0 0 40px rgba(16, 185, 129, 0.45);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(16, 185, 129, 0.08);
+  /* ── Shadows (whisper-subtle) ────────────────── */
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-dock: 0 -4px 30px rgba(0, 0, 0, 0.08);
+  --shadow-btn: 0 1px 2px rgba(79, 70, 229, 0.15);
+  --shadow-btn-hover: 0 4px 16px rgba(79, 70, 229, 0.25);
 
   /* ── Consistent radii ───────────────────────── */
-  --radius-btn: 0.625rem;
-  --radius-card: 1rem;
+  --radius-btn: 0.75rem;
+  --radius-card: 1.5rem;
+  --radius-bento: 2rem;
   --radius-pill: 9999px;
 }
 
@@ -60,7 +63,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-foreground);
+  color: var(--color-ink);
   background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -68,61 +71,90 @@ body {
 
 /* ── Selection ─────────────────────────────────── */
 ::selection {
-  background: rgba(16, 185, 129, 0.25);
-  color: #fff;
+  background: rgba(79, 70, 229, 0.12);
+  color: var(--color-ink);
 }
 
-/* ── CTA Glow Button Utility ───────────────────── */
-.btn-glow {
-  box-shadow: var(--shadow-glow);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* ── CTA Button — Indigo with soft shadow ──────── */
+.btn-primary {
+  background: var(--color-indigo-500);
+  color: #fff;
+  border-radius: var(--radius-btn);
+  box-shadow: var(--shadow-btn);
+  transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.btn-glow:hover {
-  box-shadow: var(--shadow-glow-lg);
+.btn-primary:hover {
+  background: var(--color-indigo-600);
+  box-shadow: var(--shadow-btn-hover);
   transform: translateY(-1px);
 }
 
-/* ── Glassmorphism Utility ─────────────────────── */
+/* ── Ghost Button ──────────────────────────────── */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-edge);
+  border-radius: var(--radius-btn);
+  transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.btn-ghost:hover {
+  background: var(--color-surface-muted);
+  border-color: var(--color-edge-strong);
+}
+
+/* ── Glassmorphism — Light variant ─────────────── */
 .glass {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(16px) saturate(1.6);
-  -webkit-backdrop-filter: blur(16px) saturate(1.6);
-  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid var(--color-edge);
 }
 
-/* ── Card Surface ──────────────────────────────── */
-.card-surface {
+/* ── Card — Subtle border, soft radius ─────────── */
+.card {
   background: var(--color-surface-card);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-edge);
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.card-surface:hover {
+.card:hover {
   box-shadow: var(--shadow-card-hover);
-  border-color: rgba(16, 185, 129, 0.2);
+  border-color: var(--color-edge-strong);
 }
 
-/* ── Dashboard Placeholder ─────────────────────── */
+/* ── Bento Card — Larger radius ────────────────── */
+.bento {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-edge);
+  border-radius: var(--radius-bento);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.bento:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-edge-strong);
+}
+
+/* ── Mobile Dock — Bottom glass bar ────────────── */
+.mobile-dock {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  box-shadow: var(--shadow-dock);
+  border-top: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+/* ── Dashboard placeholder (light) ─────────────── */
 .dashboard-placeholder {
-  background:
-    linear-gradient(135deg, var(--color-surface-card) 0%, rgba(16, 185, 129, 0.05) 100%);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-edge);
   border-radius: var(--radius-card);
   position: relative;
   overflow: hidden;
 }
-.dashboard-placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 30px,
-      rgba(51, 65, 85, 0.3) 30px,
-      rgba(51, 65, 85, 0.3) 31px
-    );
-  pointer-events: none;
+
+/* Bottom padding for mobile dock */
+@media (max-width: 767px) {
+  .pb-dock {
+    padding-bottom: 5.5rem;
+  }
 }
