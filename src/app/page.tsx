@@ -561,14 +561,22 @@ function Footer() {
           <span className="font-semibold text-ink">Tax4Broker</span>
         </div>
         <p>© {new Date().getFullYear()} Tax4Broker. כל הזכויות שמורות.</p>
-        <a
-          href={APP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold text-ink transition-colors hover:text-ink-secondary"
-        >
-          כניסה למערכת
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="/terms"
+            className="font-semibold text-ink transition-colors hover:text-ink-secondary"
+          >
+            תקנון האתר
+          </a>
+          <a
+            href={APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-ink transition-colors hover:text-ink-secondary"
+          >
+            כניסה למערכת
+          </a>
+        </div>
       </div>
     </footer>
   );
