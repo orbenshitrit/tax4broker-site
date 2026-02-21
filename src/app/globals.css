@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════
-   Tax4Broker — "Seato × Apple" Design System
-   Premium Light-Mode Fintech for Accountants
+   Tax4Broker — Premium B&W Design System
+   Unified with the app (tax4broker-app)
    ═══════════════════════════════════════════════ */
 
 @theme {
   /* ── Surfaces ───────────────────────────────── */
   --color-surface: #FFFFFF;
   --color-surface-subtle: #FAFAFA;
-  --color-surface-muted: #F5F5F7;
+  --color-surface-muted: #F5F5F5;
   --color-surface-card: #FFFFFF;
 
   /* ── Text (Apple-style hierarchy) ───────────── */
-  --color-ink: #1D1D1F;
-  --color-ink-secondary: #424245;
-  --color-ink-tertiary: #86868B;
-  --color-ink-quaternary: #AEAEB2;
+  --color-ink: #0A0A0A;
+  --color-ink-secondary: #404040;
+  --color-ink-tertiary: #8C8C8C;
+  --color-ink-quaternary: #BFBFBF;
 
-  /* ── Accent — Premium Black ──────────────────── */
+  /* ── Accent — Premium Black (mapped to indigo- classes) ── */
   --color-indigo-50: #F5F5F5;
   --color-indigo-100: #E5E5E5;
   --color-indigo-200: #D4D4D4;
@@ -28,30 +28,36 @@
   --color-indigo-600: #000000;
   --color-indigo-700: #000000;
 
+  /* ── Accent aliases (same as app) ───────────── */
+  --color-accent: #0A0A0A;
+  --color-accent-hover: #262626;
+  --color-accent-subtle: #F5F5F5;
+  --color-accent-muted: #E5E5E5;
+
   /* ── Borders ────────────────────────────────── */
-  --color-edge: #E5E7EB;
+  --color-edge: #E5E5E5;
   --color-edge-subtle: #F3F4F6;
-  --color-edge-strong: #D1D5DB;
+  --color-edge-strong: #D4D4D4;
 
   /* ── Semantic aliases ───────────────────────── */
   --color-background: #FFFFFF;
-  --color-foreground: #1D1D1F;
+  --color-foreground: #0A0A0A;
 
   /* ── Typography ─────────────────────────────── */
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  /* ── Shadows (whisper-subtle) ────────────────── */
+  /* ── Shadows (matching app) ─────────────────── */
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
   --shadow-dock: 0 -4px 30px rgba(0, 0, 0, 0.08);
   --shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.08);
   --shadow-btn-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
 
-  /* ── Consistent radii ───────────────────────── */
-  --radius-btn: 0.75rem;
-  --radius-card: 1.5rem;
-  --radius-bento: 2rem;
+  /* ── Consistent radii (matching app) ────────── */
+  --radius-btn: 10px;
+  --radius-card: 16px;
+  --radius-bento: 24px;
   --radius-pill: 9999px;
 }
 
@@ -75,27 +81,44 @@ body {
   color: var(--color-ink);
 }
 
-/* ── CTA Button — Indigo with soft shadow ──────── */
+/* ── CTA Button — Black, matching app ──────────── */
 .btn-primary {
-  background: var(--color-indigo-500);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-accent);
   color: #fff;
   border-radius: var(--radius-btn);
+  font-weight: 600;
+  border: none;
   box-shadow: var(--shadow-btn);
-  transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .btn-primary:hover {
-  background: var(--color-indigo-600);
+  background: var(--color-accent-hover);
   box-shadow: var(--shadow-btn-hover);
   transform: translateY(-1px);
 }
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-soft);
+}
 
-/* ── Ghost Button ──────────────────────────────── */
+/* ── Ghost Button — matching app ───────────────── */
 .btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: transparent;
   color: var(--color-ink);
   border: 1px solid var(--color-edge);
   border-radius: var(--radius-btn);
-  transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-weight: 500;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .btn-ghost:hover {
   background: var(--color-surface-muted);
@@ -110,12 +133,12 @@ body {
   border-bottom: 1px solid var(--color-edge);
 }
 
-/* ── Card — Subtle border, soft radius ─────────── */
+/* ── Card — matching app ───────────────────────── */
 .card {
   background: var(--color-surface-card);
   border: 1px solid var(--color-edge);
   border-radius: var(--radius-card);
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover {
   box-shadow: var(--shadow-card-hover);
@@ -127,7 +150,7 @@ body {
   background: var(--color-surface-subtle);
   border: 1px solid var(--color-edge);
   border-radius: var(--radius-bento);
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bento:hover {
   box-shadow: var(--shadow-card-hover);

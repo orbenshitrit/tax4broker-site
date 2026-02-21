@@ -565,7 +565,7 @@ function Footer() {
           href={APP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-indigo-500 transition-colors hover:text-indigo-600"
+          className="font-semibold text-ink transition-colors hover:text-ink-secondary"
         >
           כניסה למערכת
         </a>
