@@ -3,7 +3,7 @@
 import { LayoutDashboard, Home, HelpCircle, User } from "lucide-react";
 
 const APP_URL =
-  "https://tax4broker-app.vercel.app/";
+  "https://app.tax4broker.com/";
 
 /**
  * MobileDock — Floating bottom navigation bar (mobile only).

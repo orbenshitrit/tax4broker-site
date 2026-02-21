@@ -28,7 +28,7 @@ import MobileDock from "@/components/MobileDock";
    Constants
    ═══════════════════════════════════════════════ */
 const APP_URL =
-  "https://tax4broker-app.vercel.app/";
+  "https://app.tax4broker.com/";
 
 /* ═══════════════════════════════════════════════
    Framer Motion — Subtle fade-in only

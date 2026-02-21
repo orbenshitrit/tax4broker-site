@@ -158,7 +158,7 @@ export default function TermsPage() {
               </li>
               <li>
                 <strong>מחיקת מידע:</strong> המשתמש רשאי לבקש מחיקת חשבונו ונתוניו בכל עת באמצעות
-                פנייה לכתובת הדוא&quot;ל: support@tax4broker.com.
+                פנייה לכתובת הדוא&quot;ל: orbensh@tax4broker.com.
               </li>
             </ul>
           </section>
@@ -198,7 +198,7 @@ export default function TermsPage() {
             <p>
               אתר Tax4Broker פועל בהתאם לתקן הישראלי 5568 ולהנחיות WCAG 2.1 ברמת AA.
               אנו מחויבים להנגשת האתר והשירות לכלל הציבור, לרבות אנשים עם מוגבלויות. לדיווח
-              על בעיית נגישות ניתן לפנות אלינו בכתובת: support@tax4broker.com.
+              על בעיית נגישות ניתן לפנות אלינו בכתובת: orbensh@tax4broker.com.
             </p>
           </section>
 
@@ -208,7 +208,7 @@ export default function TermsPage() {
             <p>
               לשאלות, הבהרות או פניות בנוגע לתנאי השימוש או לשירות, ניתן לפנות אלינו בכתובת:
             </p>
-            <p className="mt-2 font-medium text-ink">support@tax4broker.com</p>
+            <p className="mt-2 font-medium text-ink">orbensh@tax4broker.com</p>
           </section>
         </div>
       </div>
