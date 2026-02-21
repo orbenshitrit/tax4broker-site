@@ -3,7 +3,7 @@
 import { LayoutDashboard, Home, HelpCircle, User } from "lucide-react";
 
 const APP_URL =
-  "https://tax4broker-xwmxobsdsi7veqe2g4av3q.streamlit.app/";
+  "https://tax4broker-app.vercel.app/";
 
 /**
  * MobileDock — Floating bottom navigation bar (mobile only).
@@ -28,12 +28,12 @@ export default function MobileDock() {
             href={APP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary flex h-[3.75rem] w-[3.75rem] items-center justify-center rounded-full shadow-[0_4px_20px_rgba(79,70,229,0.35)]"
+            className="btn-primary flex h-[3.75rem] w-[3.75rem] items-center justify-center rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
             aria-label="כניסה למערכת CRM"
           >
             <LayoutDashboard className="h-6 w-6 text-white" />
           </a>
-          <span className="mt-1 text-[10px] font-semibold text-indigo-500">
+          <span className="mt-1 text-[10px] font-semibold text-ink">
             CRM
           </span>
         </div>
@@ -58,7 +58,7 @@ function DockItem({
   return (
     <a
       href={href}
-      className="flex flex-col items-center gap-0.5 px-2 py-1 text-ink-tertiary transition-colors hover:text-indigo-500"
+      className="flex flex-col items-center gap-0.5 px-2 py-1 text-ink-tertiary transition-colors hover:text-ink"
     >
       <Icon className="h-5 w-5" />
       <span className="text-[10px] font-medium">{label}</span>

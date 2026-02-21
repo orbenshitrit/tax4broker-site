@@ -28,7 +28,7 @@ import MobileDock from "@/components/MobileDock";
    Constants
    ═══════════════════════════════════════════════ */
 const APP_URL =
-  "https://tax4broker-xwmxobsdsi7veqe2g4av3q.streamlit.app/";
+  "https://tax4broker-app.vercel.app/";
 
 /* ═══════════════════════════════════════════════
    Framer Motion — Subtle fade-in only
@@ -237,7 +237,7 @@ function DashboardVisual() {
           {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95].map((h, i) => (
             <div
               key={i}
-              className="flex-1 rounded-t-sm bg-gradient-to-t from-indigo-500 to-indigo-300"
+              className="flex-1 rounded-t-sm bg-gradient-to-t from-neutral-800 to-neutral-400"
               style={{ height: `${h}%`, opacity: 0.7 + (h / 100) * 0.3 }}
             />
           ))}
