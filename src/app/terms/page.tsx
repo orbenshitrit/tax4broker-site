@@ -23,14 +23,14 @@ export default function TermsPage() {
 
       <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6" dir="rtl">
         <h1 className="mb-2 text-2xl font-bold text-ink">תקנון אתר ותנאי שימוש</h1>
-        <p className="mb-8 text-sm text-ink-tertiary">עדכון אחרון: פברואר 2026</p>
+        <p className="mb-8 text-sm text-ink-tertiary">עדכון אחרון: מרץ 2026</p>
 
         <div className="space-y-8 text-sm leading-relaxed text-ink-secondary">
           {/* 1 */}
           <section>
             <h2 className="mb-3 text-lg font-semibold text-ink">1. כללי</h2>
             <p>
-              אתר Tax4Broker (להלן: &quot;האתר&quot;) מופעל על ידי Tax4Broker (להלן: &quot;מפעילי האתר&quot; או &quot;החברה&quot;).
+              אתר Tax4Broker (להלן: &quot;האתר&quot;) מופעל על ידי חברת מרסלוס ואלאס השקעות בע&quot;מ, ח.פ 516961083 (להלן: &quot;מפעילי האתר&quot; או &quot;החברה&quot;).
               השימוש באתר, לרבות באפליקציה, במערכת ה-CRM ובכל שירות הנלווה לו (להלן: &quot;השירות&quot;),
               כפוף לתנאי שימוש אלה. עצם השימוש באתר מהווה הסכמה מלאה ובלתי מותנית לתנאים אלה.
               אם אינך מסכים לתנאים, אנא הימנע משימוש באתר ובשירות.
@@ -171,6 +171,9 @@ export default function TermsPage() {
               לא יינתן החזר כספי. במקרה של תקלה טכנית שמנעה הפקת דוח, ניתן לפנות לתמיכה
               לבחינת הזיכוי.
             </p>
+            <p className="mt-2">
+              עיבוד התשלומים מתבצע באמצעות חברת מרסלוס ואלאס השקעות בע&quot;מ, ח.פ 516961083.
+            </p>
           </section>
 
           {/* 10 */}
@@ -206,16 +209,20 @@ export default function TermsPage() {
           <section>
             <h2 className="mb-3 text-lg font-semibold text-ink">13. יצירת קשר</h2>
             <p>
-              לשאלות, הבהרות או פניות בנוגע לתנאי השימוש או לשירות, ניתן לפנות אלינו בכתובת:
+              לשאלות, הבהרות או פניות בנוגע לתנאי השימוש או לשירות, ניתן לפנות אלינו:
             </p>
-            <p className="mt-2 font-medium text-ink">orbensh@tax4broker.com</p>
+            <ul className="mt-2 list-disc space-y-1 pr-6">
+              <li>חברה: מרסלוס ואלאס השקעות בע&quot;מ</li>
+              <li>ח.פ: 516961083</li>
+              <li>דוא&quot;ל: orbensh@tax4broker.com</li>
+            </ul>
           </section>
         </div>
       </div>
 
       {/* Mini footer */}
       <footer className="border-t border-edge bg-surface-subtle px-4 py-6 text-center text-[13px] text-ink-tertiary">
-        © {new Date().getFullYear()} Tax4Broker. כל הזכויות שמורות.
+        © {new Date().getFullYear()} מרסלוס ואלאס השקעות בע"מ | Tax4Broker. כל הזכויות שמורות.
       </footer>
     </div>
   );
